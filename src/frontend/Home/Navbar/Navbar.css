@@ -1,0 +1,10 @@
+/* icons */
+.nav-icon {
+  font-size: 2rem;
+  color: white;
+}
+.navbar-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
