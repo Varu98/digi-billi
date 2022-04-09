@@ -1,0 +1,71 @@
+@import url("https://bee-ui.netlify.app/styles/main.css");
+
+.home-wrapper {
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.category-img-container {
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 0.75fr);
+  gap: 5%;
+}
+.category-img {
+  width: 100%;
+  border: 5px solid var(--secondary-color);
+  border-radius: 5px;
+  object-fit: contain;
+}
+.category-img:hover {
+  border: 5px solid var(--primary-color);
+  transform: scale(1.05);
+  transition: all 0.2s ease-out;
+}
+
+.display-products-banner__products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+}
+
+.display-products-banner {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: goldenrod;
+}
+.display-products-banner__content {
+  font-size: 2rem;
+  color: orangered;
+}
+
+.trending-accessories-img-container {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 10rem);
+  justify-items: center;
+  align-items: center;
+  gap: 5%;
+}
+
+@media (max-width: 768px) {
+  .trending-accessories-img-container {
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 5rem);
+    justify-items: center;
+    align-items: center;
+  }
+}
+.trending-accessories-img {
+  height: 100%;
+  border-radius: 5px;
+}
