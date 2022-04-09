@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.css";
-import { products } from "../../backend/db/products";
 import ProductCard from "../ProductCard/ProductCard.jsx";
 
 const Home = () => {
