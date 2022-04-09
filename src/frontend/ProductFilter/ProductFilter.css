@@ -1,0 +1,30 @@
+.product-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+}
+.product-filter-container {
+  display: grid;
+  grid-template-columns: 0.7fr 2fr;
+  justify-content: center;
+}
+
+.filter-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.filter-container {
+  padding: 1rem;
+  border-radius: 4px;
+  height: 100%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.flex-space-btw {
+  justify-content: space-between;
+}
