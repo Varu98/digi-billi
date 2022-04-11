@@ -1,8 +1,6 @@
 import "./App.css";
-import CartPage from "./frontend/CartPage/CartPage";
 import Navbar from "./frontend/Home/Navbar/Navbar";
-import ProductPage from "./frontend/ProductPage/ProductPage";
-
+import CartPage from "./frontend/CartPage/CartPage.jsx";
 function App() {
   return (
     <div className="App">
