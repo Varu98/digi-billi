@@ -1,0 +1,41 @@
+container {
+  height: 80vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+my-cart table tr,
+td,
+th {
+  padding-bottom: 0.5rem;
+}
+
+my-cart table h3 {
+  text-align: start;
+}
+
+my-cart td {
+  font-weight: 450;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 20rem;
+  padding: 1rem;
+  margin: 1rem;
+  gap: 1rem;
+  box-shadow: 2px 2px 5px var(--shadow);
+  border-radius: 4px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid black;
+}
+
+.border-top-bottom {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
