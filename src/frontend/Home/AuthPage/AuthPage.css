@@ -1,0 +1,44 @@
+login-container {
+  height: 80vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+  margin: 1rem;
+  padding: 1rem 3rem;
+  margin: auto;
+  font-weight: 600;
+  gap: 1rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+form input {
+  border: 1px solid rgb(57, 111, 173);
+  border-radius: 4px;
+  padding: 0.3rem 0.2rem;
+}
+
+form input::placeholder {
+  font-weight: 500;
+}
+
+form label {
+  margin-right: auto;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+form .login-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+form a {
+  font-weight: 500;
+  font-size: 0.8rem;
+}

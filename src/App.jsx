@@ -1,12 +1,12 @@
 import "./App.css";
+import AuthPage from "./frontend/Home/AuthPage/AuthPage";
 import Navbar from "./frontend/Home/Navbar/Navbar";
-import WishlistPage from "./frontend/WishlistPage/WishlistPage";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <WishlistPage />
+      <AuthPage />
     </div>
   );
 }
