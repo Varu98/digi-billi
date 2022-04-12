@@ -1,4 +1,5 @@
-container {
+.container {
+  display: flex;
   height: 80vh;
   flex-wrap: wrap;
   justify-content: center;
