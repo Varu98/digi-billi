@@ -1,0 +1,14 @@
+.wishlist-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.wishlist-title {
+  border-bottom: 2px dashed var(--primary-color);
+  max-width: 10rem;
+  margin: auto;
+  margin-top: 2%;
+  font-weight: 700;
+}
