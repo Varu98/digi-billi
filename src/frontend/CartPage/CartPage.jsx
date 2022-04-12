@@ -1,8 +1,8 @@
 import React from "react";
-
+import "./CartPage.css";
 const CartPage = () => {
   return (
-    <div className="flex-row">
+    <div className="container">
       <my-cart class="cart-container">
         <table>
           <th>
