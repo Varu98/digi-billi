@@ -1,5 +1,5 @@
 import "./App.css";
-import AuthPage from "./frontend/Home/AuthPage/AuthPage";
+import AuthPage from "./frontend/AuthPage/AuthPage";
 import Navbar from "./frontend/Home/Navbar/Navbar";
 
 function App() {
