@@ -5,15 +5,18 @@ import {
   AiOutlineHeart,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
       <header>
         <navbar className="flex-row bg-d-blue text-white">
           <div className="navbar-list navbar-primary flex-row">
-            <button className="secondary-btn">
-              <h1>Cell Kart 🛒</h1>
-            </button>
+            <Link to="/">
+              <button className="secondary-btn">
+                <h1>Cell Kart 🛒</h1>
+              </button>
+            </Link>
           </div>
           <label htmlFor="">
             <AiOutlineSearch />
@@ -25,11 +28,15 @@ const Navbar = () => {
             </button>
             <ul className="flex-row navbar-ul">
               <li>
-                <button className="secondary-btn">Logout</button>
+                <Link to="login">Logout</Link>
               </li>
-              <AiOutlineShoppingCart className="nav-icon" />
+              <Link to="cart">
+                <AiOutlineShoppingCart className="nav-icon" />
+              </Link>
               <li>
-                <AiOutlineHeart className="nav-icon" />
+                <Link to="wishlist">
+                  <AiOutlineHeart className="nav-icon" />
+                </Link>
               </li>
             </ul>
           </div>
