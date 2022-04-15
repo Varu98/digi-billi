@@ -6,8 +6,12 @@ const Home = () => {
   return (
     <div className="home-wrapper">
       <div className="category-img-container">
-        <img className="category-img" src="assets/trending.jpg" alt="" />
-        <img className="category-img" src="assets/bestsellers.jpg" alt="" />
+        <img
+          className="category-img"
+          src="assets/bestsellersmonth.jpg"
+          alt=""
+        />
+        <img className="category-img" src="assets/pocket-friendly.jpg" alt="" />
         <img className="category-img" src="assets/latest.jpg" alt="" />
         <img
           className="category-img"
