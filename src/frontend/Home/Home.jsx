@@ -9,7 +9,11 @@ const Home = () => {
         <img className="category-img" src="assets/trending.jpg" alt="" />
         <img className="category-img" src="assets/bestsellers.jpg" alt="" />
         <img className="category-img" src="assets/latest.jpg" alt="" />
-        <img className="category-img" src="assets/valentine's.jpg" alt="" />
+        <img
+          className="category-img"
+          src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/WLA/Feb22/MobPage/Tiles/D38622198_440x440_4.jpg"
+          alt=""
+        />
       </div>
       {/* Banner Image */}
       <div className="banner-img">
