@@ -16,7 +16,7 @@ export const products = [
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
-    categoryName: "trending",
+    categoryName: "Bestsellers",
     img: "https://rukminim2.flixcart.com/image/312/312/ktbu6q80/mobile/q/g/q/8i-rmx3151-realme-original-imag6zhnbsuhcqny.jpeg?q=70",
   },
   {
@@ -28,7 +28,7 @@ export const products = [
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
-    categoryName: "trending",
+    categoryName: "Bestsellers",
     img: "https://rukminim2.flixcart.com/image/312/312/kppt47k0/mobile/t/k/o/y73-v2059-vivo-original-imag3vdgwpf8zzvk.jpeg?q=70",
   },
   {
@@ -40,8 +40,7 @@ export const products = [
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
-    categoryName: "trending",
-
+    categoryName: "wfh",
     img: "https://rukminim2.flixcart.com/image/312/312/krme93k0/mobile/k/x/5/galaxy-a22-5g-sm-a226blghins-samsung-original-imag5dgzhyf8gjta.jpeg?q=70",
   },
   {
@@ -53,7 +52,7 @@ export const products = [
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
-    categoryName: "trending",
+    categoryName: "Latest",
 
     img: "https://rukminim2.flixcart.com/image/312/312/kzhbfrk0/mobile/0/r/j/-original-imagbgxffuvx56mm.jpeg?q=70",
   },
@@ -64,7 +63,7 @@ export const products = [
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
-    categoryName: "trending",
+    categoryName: "BudgetFriendly",
     img: "https://bee-ui.netlify.app/assets/realme_phone.jpeg",
   },
 ];
