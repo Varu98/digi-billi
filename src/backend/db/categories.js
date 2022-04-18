@@ -8,20 +8,22 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "fiction",
-    description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+    categoryName: "Bestsellers",
+    description: "Our most popular products based on sales. Updated hourly.",
   },
   {
     _id: uuid(),
-    categoryName: "non-fiction",
-    description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+    categoryName: "BudgetFriendly",
+    description: "Handpicked mobile accessories to suit your budget",
   },
   {
     _id: uuid(),
-    categoryName: "horror",
-    description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+    categoryName: "Latest",
+    description: "Explore what's trending in tech",
+  },
+  {
+    _id: uuid(),
+    categoryName: "wfh",
+    description: "The perfect accessories to satisfy your work from home needs",
   },
 ];
