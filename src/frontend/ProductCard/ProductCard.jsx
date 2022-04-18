@@ -1,5 +1,7 @@
 import React from "react";
+import { AiOutlineHeart } from "react-icons/ai";
 import { products } from "../../backend/db/products";
+import "./ProductCard.css";
 
 const ProductCard = () => {
   return (
@@ -7,6 +9,7 @@ const ProductCard = () => {
       {products.map(
         ({ _id, title, price, isDisc, discount, categoryName, img, desc }) => (
           <div key={_id} className="price-card">
+            <AiOutlineHeart className="wishlist-icon" />
             <span className="price-card-img">
               <img src={img} alt="" />
             </span>
