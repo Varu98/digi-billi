@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 const ProductContext = createContext();
 
+// use of custom hooks to call the product context globally
 const useProducts = () => useContext(ProductContext);
 
 const ProductProvider = ({ children }) => {
