@@ -46,8 +46,7 @@ const ProductFilter = () => {
               <input name="rating" type="radio" />3 Star and above
             </label>
             <label for="rating">
-              <input name="rating" type="radio" />
-              Star and above
+              <input name="rating" type="radio" />2 Star and above
             </label>
           </filter-section>
 
