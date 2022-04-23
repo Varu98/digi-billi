@@ -8,14 +8,18 @@
 }
 .product-filter-container {
   display: grid;
-  grid-template-columns: 0.7fr 2fr;
+  grid-template-columns: 0.4fr 2fr;
   justify-content: center;
 }
 
 .filter-content-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
+  color: whitesmoke;
+
 }
 
 .filter-container {
@@ -23,8 +27,16 @@
   border-radius: 4px;
   height: 100%;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #343a40;
+
 }
 
 .flex-space-btw {
   justify-content: space-between;
+}
+
+filter-section{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 }
