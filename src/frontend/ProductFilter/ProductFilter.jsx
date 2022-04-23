@@ -52,7 +52,7 @@ const ProductFilter = () => {
           </filter-section>
 
           <filter-section className="flex-column">
-            <h2>Rating</h2>
+            <h2>Sort</h2>
             <label for="price-sort">
               <input name="price-sort" type="radio" />
               price - low to high
