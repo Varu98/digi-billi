@@ -70,7 +70,7 @@ const ProductFilter = () => {
                 name="price-sort"
                 type="radio"
               />
-              price - low to high
+              Price - Low To High
             </label>
             <label for="price-sort">
               <input
@@ -84,7 +84,7 @@ const ProductFilter = () => {
                 name="price-sort"
                 type="radio"
               />
-              price - high to low
+              Price - High To Low
             </label>
           </filter-section>
         </div>
