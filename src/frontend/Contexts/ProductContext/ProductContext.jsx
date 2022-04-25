@@ -2,7 +2,6 @@ import axios from "axios";
 import { createContext, useContext } from "react";
 import { useState, useEffect } from "react";
 import {
-  clearFilter,
   filterByCategory,
   filterByRating,
   priceSort,
