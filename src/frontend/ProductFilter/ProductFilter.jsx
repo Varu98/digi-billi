@@ -4,7 +4,7 @@ import "./ProductFilter.css";
 
 const ProductFilter = () => {
   const {
-    filterState: { sortBy },
+    filterState: { sortBy, isRealme, isApple, isVivo, isOppo, isSamsung },
     filterDispatch,
   } = useProducts();
 
@@ -14,7 +14,13 @@ const ProductFilter = () => {
         <div className="filter-content-container">
           <filter-section className="flex-row flex-space-btw">
             <h2>Filters</h2>
-            <button>clear</button>
+            <button
+              onClick={() => {
+                filterDispatch({ type: "CLEAR_ALL_FILTERS" });
+              }}
+            >
+              clear
+            </button>
           </filter-section>
 
           <filter-section>
@@ -30,33 +36,103 @@ const ProductFilter = () => {
           <filter-section className="flex-column">
             <h2>Category</h2>
             <label for="mobile-brand">
-              <input name="mobile-brand" type="checkbox" />
+              <input
+                name="mobile-brand"
+                type="checkbox"
+                onChange={() => {
+                  filterDispatch({ type: "REALME" });
+                }}
+                checked={isRealme}
+              />
               Realme
             </label>
             <label for="mobile-brand">
-              <input name="mobile-brand" type="checkbox" />
+              <input
+                name="mobile-brand"
+                type="checkbox"
+                onChange={() => {
+                  filterDispatch({ type: "OPPO" });
+                }}
+                checked={isOppo}
+              />
               Oppo
             </label>
             <label for="mobile-brand">
-              <input name="mobile-brand" type="checkbox" />
+              <input
+                name="mobile-brand"
+                type="checkbox"
+                onChange={() => {
+                  filterDispatch({ type: "SAMSUNG" });
+                }}
+                checked={isSamsung}
+              />
               Samsung
             </label>
             <label for="mobile-brand">
-              <input name="mobile-brand" type="checkbox" />
+              <input
+                name="mobile-brand"
+                type="checkbox"
+                onChange={() => {
+                  filterDispatch({ type: "VIVO" });
+                }}
+                checked={isVivo}
+              />
               Vivo
+            </label>
+            <label for="mobile-brand">
+              <input
+                name="mobile-brand"
+                type="checkbox"
+                checked={isApple}
+                onChange={() => {
+                  filterDispatch({ type: "APPLE" });
+                }}
+              />
+              Apple
             </label>
           </filter-section>
 
           <filter-section className="flex-column">
             <h2>Rating</h2>
             <label for="rating">
-              <input name="rating" type="radio" />4 Star and above
+              <input
+                onChange={() => {
+                  filterDispatch({ type: "RATING", payload: 5 });
+                }}
+                name="rating"
+                type="radio"
+              />
+              5 Star
             </label>
             <label for="rating">
-              <input name="rating" type="radio" />3 Star and above
+              <input
+                onChange={() => {
+                  filterDispatch({ type: "RATING", payload: 4 });
+                }}
+                name="rating"
+                type="radio"
+              />
+              4 Star and above
             </label>
             <label for="rating">
-              <input name="rating" type="radio" />2 Star and above
+              <input
+                onChange={() => {
+                  filterDispatch({ type: "RATING", payload: 3 });
+                }}
+                name="rating"
+                type="radio"
+              />
+              3 Star and above
+            </label>
+            <label for="rating">
+              <input
+                onChange={() => {
+                  filterDispatch({ type: "RATING", payload: 2 });
+                }}
+                name="rating"
+                type="radio"
+              />
+              2 Star and above
             </label>
           </filter-section>
 

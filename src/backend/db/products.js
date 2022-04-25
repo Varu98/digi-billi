@@ -18,6 +18,7 @@ export const products = [
     discount: faker.datatype.number({ min: 20, max: 40 }),
     categoryName: "Realme",
     img: "https://rukminim2.flixcart.com/image/312/312/ktbu6q80/mobile/q/g/q/8i-rmx3151-realme-original-imag6zhnbsuhcqny.jpeg?q=70",
+    ratings: faker.datatype.number({ min: 2, max: 5 }),
   },
   {
     _id: uuid(),
@@ -30,6 +31,7 @@ export const products = [
     discount: faker.datatype.number({ min: 20, max: 40 }),
     categoryName: "Vivo",
     img: "https://rukminim2.flixcart.com/image/312/312/kppt47k0/mobile/t/k/o/y73-v2059-vivo-original-imag3vdgwpf8zzvk.jpeg?q=70",
+    ratings: faker.datatype.number({ min: 2, max: 5 }),
   },
   {
     _id: uuid(),
@@ -42,6 +44,7 @@ export const products = [
     discount: faker.datatype.number({ min: 20, max: 40 }),
     categoryName: "Samsung",
     img: "https://rukminim2.flixcart.com/image/312/312/krme93k0/mobile/k/x/5/galaxy-a22-5g-sm-a226blghins-samsung-original-imag5dgzhyf8gjta.jpeg?q=70",
+    ratings: faker.datatype.number({ min: 2, max: 5 }),
   },
   {
     _id: uuid(),
@@ -55,6 +58,7 @@ export const products = [
     categoryName: "Oppo",
 
     img: "https://rukminim2.flixcart.com/image/416/416/kzhbfrk0/mobile/r/o/e/-original-imagbgxfyvznjhcp.jpeg?q=70",
+    ratings: faker.datatype.number({ min: 2, max: 5 }),
   },
   {
     _id: uuid(),
@@ -65,6 +69,7 @@ export const products = [
     discount: faker.datatype.number({ min: 20, max: 40 }),
     categoryName: "Realme",
     img: "https://bee-ui.netlify.app/assets/realme_phone.jpeg",
+    ratings: faker.datatype.number({ min: 2, max: 5 }),
   },
   {
     _id: uuid(),
@@ -75,6 +80,7 @@ export const products = [
     discount: faker.datatype.number({ min: 20, max: 40 }),
     categoryName: "Realme",
     img: "https://rukminim2.flixcart.com/image/416/416/ky90scw0/mobile/m/r/u/-original-imagagnffruu7ptd.jpeg?q=70",
+    ratings: faker.datatype.number({ min: 2, max: 5 }),
   },
   {
     _id: uuid(),
@@ -85,6 +91,7 @@ export const products = [
     discount: faker.datatype.number({ min: 20, max: 40 }),
     categoryName: "Realme",
     img: "https://rukminim2.flixcart.com/image/416/416/ksnjp8w0/mobile/k/o/m/c21y-rmx3261-realme-original-imag65kcytrk8dtr.jpeg?q=70",
+    ratings: faker.datatype.number({ min: 2, max: 5 }),
   },
   {
     _id: uuid(),
@@ -95,6 +102,7 @@ export const products = [
     discount: faker.datatype.number({ min: 20, max: 40 }),
     categoryName: "Oppo",
     img: "https://rukminim2.flixcart.com/image/416/416/l12h1u80/mobile/z/u/m/-original-imagcpehdsg47sfp.jpeg?q=70",
+    ratings: faker.datatype.number({ min: 2, max: 5 }),
   },
   {
     _id: uuid(),
@@ -105,6 +113,7 @@ export const products = [
     discount: faker.datatype.number({ min: 20, max: 40 }),
     categoryName: "Oppo",
     img: "https://rukminim2.flixcart.com/image/416/416/l1zc6fk0/mobile/u/7/w/f21-pro-cph2363-oppo-original-imagdf4jphscz9jz.jpeg?q=70",
+    ratings: faker.datatype.number({ min: 2, max: 5 }),
   },
   {
     _id: uuid(),
@@ -115,6 +124,7 @@ export const products = [
     discount: faker.datatype.number({ min: 20, max: 40 }),
     categoryName: "Vivo",
     img: "https://rukminim2.flixcart.com/image/416/416/kzd147k0/mobile/z/9/h/-original-imagbe5qnquhuude.jpeg?q=70",
+    ratings: faker.datatype.number({ min: 2, max: 5 }),
   },
   {
     _id: uuid(),
@@ -125,6 +135,7 @@ export const products = [
     discount: faker.datatype.number({ min: 20, max: 40 }),
     categoryName: "Vivo",
     img: "https://rukminim2.flixcart.com/image/416/416/ks3jjbk0/mobile/p/b/k/y53s-v2058-vivo-original-imag5q35phmm3fjc.jpeg?q=70",
+    ratings: faker.datatype.number({ min: 2, max: 5 }),
   },
   {
     _id: uuid(),
@@ -135,6 +146,7 @@ export const products = [
     discount: faker.datatype.number({ min: 20, max: 40 }),
     categoryName: "Samsung",
     img: "https://rukminim2.flixcart.com/image/416/416/l1dwknk0/mobile/l/2/q/-original-imagcyr2zr4swxhz.jpeg?q=70",
+    ratings: faker.datatype.number({ min: 2, max: 5 }),
   },
   {
     _id: uuid(),
@@ -145,6 +157,7 @@ export const products = [
     discount: faker.datatype.number({ min: 20, max: 40 }),
     categoryName: "Samsung",
     img: "https://rukminim2.flixcart.com/image/416/416/l1v1uvk0/mobile/t/d/x/galaxy-m33-5g-sm-m336bzbpins-samsung-original-imagdc87gdyremd3.jpeg?q=70",
+    ratings: faker.datatype.number({ min: 2, max: 5 }),
   },
   {
     _id: uuid(),
@@ -155,6 +168,7 @@ export const products = [
     discount: faker.datatype.number({ min: 20, max: 40 }),
     categoryName: "Apple",
     img: "https://rukminim2.flixcart.com/image/416/416/kgiaykw0/mobile/d/d/s/apple-iphone-11-mhdj3hn-a-original-imafwqepmfedbhb2.jpeg?q=70",
+    ratings: faker.datatype.number({ min: 2, max: 5 }),
   },
   {
     _id: uuid(),
@@ -165,6 +179,7 @@ export const products = [
     discount: faker.datatype.number({ min: 20, max: 40 }),
     categoryName: "Apple",
     img: "https://rukminim2.flixcart.com/image/416/416/k9loccw0/mobile/6/8/g/apple-iphone-se-mxvv2hn-a-original-imafrcqmfxhcrpsb.jpeg?q=70",
+    ratings: faker.datatype.number({ min: 2, max: 5 }),
   },
   {
     _id: uuid(),
@@ -175,5 +190,6 @@ export const products = [
     discount: faker.datatype.number({ min: 20, max: 40 }),
     categoryName: "Apple",
     img: "https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/s/n/i/iphone-13-mlpk3hn-a-apple-original-imag6vpyrhqjgqzw.jpeg?q=70",
+    ratings: faker.datatype.number({ min: 2, max: 5 }),
   },
 ];
