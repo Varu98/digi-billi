@@ -35,11 +35,15 @@ const ProductFilter = () => {
             </label>
             <label for="mobile-brand">
               <input name="mobile-brand" type="checkbox" />
-              Redmi
+              Oppo
             </label>
             <label for="mobile-brand">
               <input name="mobile-brand" type="checkbox" />
-              Motorola
+              Samsung
+            </label>
+            <label for="mobile-brand">
+              <input name="mobile-brand" type="checkbox" />
+              Vivo
             </label>
           </filter-section>
 
