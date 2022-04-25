@@ -19,15 +19,19 @@
   align-items: center;
   gap: 2rem;
   color: whitesmoke;
+  position: fixed;
 
 }
 
 .filter-container {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   border-radius: 4px;
-  height: 100vh;
+  min-height: 100%;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   background-color: #343a40;
+  align-items: center;
 
 }
 

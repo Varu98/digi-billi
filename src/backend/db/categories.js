@@ -8,22 +8,27 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "Bestsellers",
+    categoryName: "Samsung",
     description: "Our most popular products based on sales. Updated hourly.",
   },
   {
     _id: uuid(),
-    categoryName: "BudgetFriendly",
+    categoryName: "Vivo",
     description: "Handpicked mobile accessories to suit your budget",
   },
   {
     _id: uuid(),
-    categoryName: "Latest",
+    categoryName: "Realme",
     description: "Explore what's trending in tech",
   },
   {
     _id: uuid(),
-    categoryName: "wfh",
+    categoryName: "Oppo",
     description: "The perfect accessories to satisfy your work from home needs",
+  },
+  {
+    _id: uuid(),
+    categoryName: "Apple",
+    description: "An Apple a day keeps the Inconvenience away ",
   },
 ];
