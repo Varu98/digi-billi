@@ -12,6 +12,7 @@ export const filterReducer = (state, action) => {
     case "SORT_BY_PRICE":
       return { ...state, sortBy: action.payload };
     case "CLEAR_ALL_FILTERS":
+      // returning initial state will clear the filters
       return initialFiltersState;
     case "REALME":
       return { ...state, isRealme: !state.isRealme };
