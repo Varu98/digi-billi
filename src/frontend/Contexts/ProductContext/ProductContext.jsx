@@ -1,6 +1,12 @@
 import axios from "axios";
 import { createContext, useContext } from "react";
 import { useState, useEffect } from "react";
+import { priceSort } from "../../Utilities/filterLogic";
+import { useReducer } from "react";
+import {
+  filterReducer,
+  initialFiltersState,
+} from "../../Reducers/filterReducer";
 
 const ProductContext = createContext();
 
@@ -32,8 +38,17 @@ const ProductProvider = ({ children }) => {
     })();
   }, []);
 
+  const [filterState, filterDispatch] = useReducer(
+    filterReducer,
+    initialFiltersState
+  );
+
+  const newProducts = priceSort(filterState.sortBy, products);
+
   return (
-    <ProductContext.Provider value={{ products, categories }}>
+    <ProductContext.Provider
+      value={{ newProducts, filterState, filterDispatch, products, categories }}
+    >
       {children}
     </ProductContext.Provider>
   );

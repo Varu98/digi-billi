@@ -1,13 +1,14 @@
 import React from "react";
 import { AiOutlineHeart } from "react-icons/ai";
-import { useProducts } from "../contexts/ProductContext/ProductContext";
+import { useProducts } from "../Contexts/ProductContext/ProductContext";
 import "./ProductCard.css";
 
 const ProductCard = () => {
-  const { products } = useProducts();
+  const { newProducts } = useProducts();
+  console.log(newProducts);
   return (
     <>
-      {products.map(({ _id, title, price, discount, img, desc }) => (
+      {newProducts.map(({ _id, title, price, discount, img, desc }) => (
         <div key={_id} className="price-card">
           <AiOutlineHeart className="wishlist-icon" />
           <span className="price-card-img">
