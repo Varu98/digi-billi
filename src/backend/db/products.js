@@ -54,7 +54,7 @@ export const products = [
     discount: faker.datatype.number({ min: 20, max: 40 }),
     categoryName: "Oppo",
 
-    img: "https://rukminim2.flixcart.com/image/312/312/kzhbfrk0/mobile/0/r/j/-original-imagbgxffuvx56mm.jpeg?q=70",
+    img: "https://rukminim2.flixcart.com/image/416/416/kzhbfrk0/mobile/r/o/e/-original-imagbgxfyvznjhcp.jpeg?q=70",
   },
   {
     _id: uuid(),
