@@ -8,9 +8,6 @@ const ProductPage = () => {
       <ProductFilter />
       <div className="product-container">
         <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
       </div>
     </div>
   );

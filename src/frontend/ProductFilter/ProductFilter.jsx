@@ -1,7 +1,13 @@
 import React from "react";
+import { useProducts } from "../Contexts/ProductContext/ProductContext";
 import "./ProductFilter.css";
 
 const ProductFilter = () => {
+  const {
+    filterState: { sortBy },
+    filterDispatch,
+  } = useProducts();
+
   return (
     <div>
       <div className="filter-container">
@@ -46,20 +52,39 @@ const ProductFilter = () => {
               <input name="rating" type="radio" />3 Star and above
             </label>
             <label for="rating">
-              <input name="rating" type="radio" />
-              Star and above
+              <input name="rating" type="radio" />2 Star and above
             </label>
           </filter-section>
 
           <filter-section className="flex-column">
-            <h2>Rating</h2>
+            <h2>Sort</h2>
             <label for="price-sort">
-              <input name="price-sort" type="radio" />
-              price - low to high
+              <input
+                checked={sortBy && sortBy === "LOW_TO_HIGH"}
+                onChange={() => {
+                  filterDispatch({
+                    type: "SORT_BY_PRICE",
+                    payload: "LOW_TO_HIGH",
+                  });
+                }}
+                name="price-sort"
+                type="radio"
+              />
+              Price - Low To High
             </label>
             <label for="price-sort">
-              <input name="price-sort" type="radio" />
-              price - high to low
+              <input
+                onChange={() => {
+                  filterDispatch({
+                    type: "SORT_BY_PRICE",
+                    payload: "HIGH_TO_LOW",
+                  });
+                }}
+                checked={sortBy && sortBy === "HIGH_TO_LOW"}
+                name="price-sort"
+                type="radio"
+              />
+              Price - High To Low
             </label>
           </filter-section>
         </div>
