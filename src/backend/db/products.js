@@ -11,7 +11,7 @@ export const products = [
     _id: uuid(),
     title: "realme 8i | 64 GB/4 GB RAM | Space Black",
 
-    price: faker.commerce.price(20000, 50000, 0, "INR "),
+    price: faker.commerce.price(20000, 80000, 0, "INR "),
 
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
@@ -23,7 +23,7 @@ export const products = [
     _id: uuid(),
     title: "vivo Y73 | 128 GB/8 GB RAM | Diamond Flare",
 
-    price: faker.commerce.price(20000, 50000, 0, "INR "),
+    price: faker.commerce.price(20000, 80000, 0, "INR "),
 
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
@@ -35,7 +35,7 @@ export const products = [
     _id: uuid(),
     title: "Samsung Galaxy A22 5G | 8GB RAM/128GB Storage | Grey",
 
-    price: faker.commerce.price(20000, 50000, 0, "INR "),
+    price: faker.commerce.price(20000, 80000, 0, "INR "),
 
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
@@ -47,7 +47,7 @@ export const products = [
     _id: uuid(),
     title: "OPPO Reno7 Pro 5G | 12GB RAM/256 GB | Starlight Black",
 
-    price: faker.commerce.price(20000, 50000, 0, "INR "),
+    price: faker.commerce.price(20000, 80000, 0, "INR "),
 
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
@@ -59,7 +59,7 @@ export const products = [
   {
     _id: uuid(),
     title: "Realme Pro 5G | 12GB RAM/256 GB | Starlight Black",
-    price: faker.commerce.price(20000, 50000, 0, "INR "),
+    price: faker.commerce.price(20000, 80000, 0, "INR "),
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
@@ -69,7 +69,7 @@ export const products = [
   {
     _id: uuid(),
     title: "Realme 9i (Prism Black, 128 GB)  (4 GB RAM)",
-    price: faker.commerce.price(20000, 50000, 0, "INR "),
+    price: faker.commerce.price(20000, 80000, 0, "INR "),
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
@@ -79,7 +79,7 @@ export const products = [
   {
     _id: uuid(),
     title: "Realme C21Y (Cross Blue, 32 GB)  (3 GB RAM)",
-    price: faker.commerce.price(20000, 50000, 0, "INR "),
+    price: faker.commerce.price(20000, 80000, 0, "INR "),
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
@@ -89,7 +89,7 @@ export const products = [
   {
     _id: uuid(),
     title: "OPPO K10 (Blue Flame, 128 GB)  (6 GB RAM)",
-    price: faker.commerce.price(20000, 50000, 0, "INR "),
+    price: faker.commerce.price(20000, 80000, 0, "INR "),
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
@@ -99,7 +99,7 @@ export const products = [
   {
     _id: uuid(),
     title: "OPPO F21 pro (Sunset Orange, 128 GB)  (8 GB RAM)",
-    price: faker.commerce.price(20000, 50000, 0, "INR "),
+    price: faker.commerce.price(20000, 80000, 0, "INR "),
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
@@ -109,7 +109,7 @@ export const products = [
   {
     _id: uuid(),
     title: "vivo T1 5G (Rainbow Fantasy, 128 GB)  (6 GB RAM)",
-    price: faker.commerce.price(20000, 50000, 0, "INR "),
+    price: faker.commerce.price(20000, 80000, 0, "INR "),
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
@@ -119,7 +119,7 @@ export const products = [
   {
     _id: uuid(),
     title: "vivo Y53s (Deep Sea Blue, 128 GB)  (8 GB RAM)",
-    price: faker.commerce.price(20000, 50000, 0, "INR "),
+    price: faker.commerce.price(20000, 80000, 0, "INR "),
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
@@ -129,7 +129,7 @@ export const products = [
   {
     _id: uuid(),
     title: "SAMSUNG Galaxy A73 5G (Awesome White, 128 GB)  (8 GB RAM)",
-    price: faker.commerce.price(20000, 50000, 0, "INR "),
+    price: faker.commerce.price(20000, 80000, 0, "INR "),
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
@@ -139,7 +139,7 @@ export const products = [
   {
     _id: uuid(),
     title: "SAMSUNG Galaxy M33 5G (Deep Ocean Blue, 128 GB)  (6 GB RAM)",
-    price: faker.commerce.price(20000, 50000, 0, "INR "),
+    price: faker.commerce.price(20000, 80000, 0, "INR "),
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
@@ -149,7 +149,7 @@ export const products = [
   {
     _id: uuid(),
     title: "APPLE iPhone 11 (White, 128 GB)",
-    price: faker.commerce.price(20000, 50000, 0, "INR "),
+    price: faker.commerce.price(20000, 80000, 0, "INR "),
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
@@ -159,7 +159,7 @@ export const products = [
   {
     _id: uuid(),
     title: "APPLE iPhone SE (Red, 64 GB)",
-    price: faker.commerce.price(20000, 50000, 0, "INR "),
+    price: faker.commerce.price(20000, 80000, 0, "INR "),
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
@@ -169,7 +169,7 @@ export const products = [
   {
     _id: uuid(),
     title: "APPLE iPhone 13 (Blue, 128 GB)",
-    price: faker.commerce.price(20000, 50000, 0, "INR "),
+    price: faker.commerce.price(20000, 80000, 0, "INR "),
     isDiscount: faker.datatype.boolean,
     desc: faker.commerce.productDescription(),
     discount: faker.datatype.number({ min: 20, max: 40 }),
