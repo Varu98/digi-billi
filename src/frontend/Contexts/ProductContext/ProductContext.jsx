@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import {
   filterByCategory,
   filterByRating,
+  filterBySliderPrice,
   priceSort,
 } from "../../Utilities/filterLogic";
 import { useReducer } from "react";
@@ -49,7 +50,15 @@ const ProductProvider = ({ children }) => {
     initialFiltersState
   );
 
-  const productsByRating = filterByRating(filterState, products);
+  const filteredProductsByPriceSlider = filterBySliderPrice(
+    filterState,
+    products
+  );
+
+  const productsByRating = filterByRating(
+    filterState,
+    filteredProductsByPriceSlider
+  );
 
   const filteredProducts = filterByCategory(filterState, productsByRating);
 

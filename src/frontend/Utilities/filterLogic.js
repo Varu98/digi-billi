@@ -77,3 +77,13 @@ export const filterByRating = ({ byRating }, products) => {
   }
   return [...products];
 };
+
+// filter according to change in the price slider
+
+export const filterBySliderPrice = ({ priceSliderValue }, products) => {
+  if (priceSliderValue)
+    return products.filter((product) => {
+      console.log(priceSliderValue, Number(product.price.split(" ")[1]));
+      return parseInt(product.price.split(" ")[1]) < priceSliderValue;
+    });
+};

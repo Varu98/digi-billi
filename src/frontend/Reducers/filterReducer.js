@@ -6,6 +6,7 @@ export const initialFiltersState = {
   isSamsung: false,
   sortBy: "",
   byRating: 0,
+  priceSliderValue: 90000,
 };
 export const filterReducer = (state, action) => {
   switch (action.type) {
@@ -26,6 +27,8 @@ export const filterReducer = (state, action) => {
       return { ...state, isApple: !state.isApple };
     case "RATING":
       return { ...state, byRating: action.payload };
+    case "PRICE_SLIDER":
+      return { ...state, priceSliderValue: action.payload };
     default:
       return { ...state };
   }

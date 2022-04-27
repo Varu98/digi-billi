@@ -4,7 +4,15 @@ import "./ProductFilter.css";
 
 const ProductFilter = () => {
   const {
-    filterState: { sortBy, isRealme, isApple, isVivo, isOppo, isSamsung },
+    filterState: {
+      sortBy,
+      isRealme,
+      isApple,
+      isVivo,
+      isOppo,
+      isSamsung,
+      priceSliderValue,
+    },
     filterDispatch,
   } = useProducts();
 
@@ -26,11 +34,24 @@ const ProductFilter = () => {
           <filter-section>
             <h2>Price</h2>
             <div className="price-range flex-row">
-              <span>50</span>
-              <span>150</span>
-              <span>200</span>
+              <span>10000</span>
+              <span>90000</span>
             </div>
-            <input type="range" name="" id="filter-range-input" />
+            <input
+              type="range"
+              name=""
+              min="10000"
+              max="90000"
+              step={10000}
+              value={priceSliderValue}
+              id="filter-range-input"
+              onChange={(e) => {
+                filterDispatch({
+                  type: "PRICE_SLIDER",
+                  payload: e.target.value,
+                });
+              }}
+            />
           </filter-section>
 
           <filter-section className="flex-column">

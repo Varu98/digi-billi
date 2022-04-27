@@ -44,3 +44,10 @@ filter-section{
   gap: .5rem;
   align-items: flex-start;
 }
+
+.price-range{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+  width: 100%;
+}
