@@ -4,12 +4,14 @@ import ProductFilter from "../ProductFilter/ProductFilter.jsx";
 
 const ProductPage = () => {
   return (
-    <div className="product-filter-container">
-      <ProductFilter />
-      <div className="product-container">
-        <ProductCard />
+    <>
+      <div className="product-filter-container">
+        <ProductFilter />
+        <div className="product-container">
+          <ProductCard />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
