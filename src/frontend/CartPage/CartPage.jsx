@@ -1,8 +1,57 @@
-import React from "react";
+import { AiOutlineHeart } from "react-icons/ai";
+import { IoTrashBinOutline } from "react-icons/io5";
+import { useCart } from "../Contexts/CartContext/CartContext";
 import "./CartPage.css";
 const CartPage = () => {
+  const {
+    cartState: { cartItems },
+    cartDispatch,
+  } = useCart();
   return (
-    <div className="container">
+    <>
+      <div className="cart-items-wrapper">
+        {cartItems.map((cartItem) => {
+          const { _id, img, title, price, discount, ratings, desc } = cartItem;
+
+          return (
+            <div key={_id} className="price-card">
+              <AiOutlineHeart className="wishlist-icon" />
+              <span className="price-card-img">
+                <img src={img} alt="" />
+              </span>
+              <div className="price-card-header">
+                <div className="price-card-product-name">{title}</div>
+                <span className="price-card-product-price">{price}</span>
+                <span className="price-card-price-badge">
+                  <span className="price-card-discount-rate">{discount}%</span>
+                  <span className="material-icons price-card-icon-discount">
+                    {" "}
+                    discount{" "}
+                  </span>
+                </span>
+              </div>
+              <div className="price-card-body">{desc}</div>
+              <div className="price-card-footer">
+                <span className="price-card-product-price">{ratings}⭐️</span>
+                <button
+                  style={{ backgroundColor: "#A30000" }}
+                  onClick={() => {
+                    cartDispatch({
+                      type: "REMOVE_FROM_CART",
+                      payload: cartItem._id,
+                    });
+                  }}
+                  className="secondary-btn"
+                >
+                  Remove from Cart
+                  <IoTrashBinOutline className="price-card-icon-cart" />
+                </button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      {/* Price Summary */}
       <my-cart class="cart-container">
         <table>
           <th>
@@ -32,7 +81,7 @@ const CartPage = () => {
           Place Order
         </button>
       </my-cart>
-    </div>
+    </>
   );
 };
 
