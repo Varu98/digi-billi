@@ -1,5 +1,3 @@
-import React from "react";
-import { useEffect } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { IoTrashBinOutline } from "react-icons/io5";
 import { useCart } from "../Contexts/CartContext/CartContext";
