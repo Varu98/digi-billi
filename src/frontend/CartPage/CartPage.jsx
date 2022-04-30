@@ -1,8 +1,51 @@
 import React from "react";
+import { useEffect } from "react";
+import { AiOutlineHeart } from "react-icons/ai";
+import { useCart } from "../Contexts/CartContext/CartContext";
 import "./CartPage.css";
 const CartPage = () => {
+  const {
+    cartState: { cartItems },
+  } = useCart();
   return (
-    <div className="container">
+    <>
+      <div className="cart-items-wrapper">
+        {cartItems.map((cartItem) => {
+          const { _id, img, title, price, discount, ratings, desc } = cartItem;
+
+          return (
+            <div key={_id} className="price-card">
+              <AiOutlineHeart className="wishlist-icon" />
+              <span className="price-card-img">
+                <img src={img} alt="" />
+              </span>
+              <div className="price-card-header">
+                <div className="price-card-product-name">{title}</div>
+                <span className="price-card-product-price">{price}</span>
+                <span className="price-card-price-badge">
+                  <span className="price-card-discount-rate">{discount}%</span>
+                  <span className="material-icons price-card-icon-discount">
+                    {" "}
+                    discount{" "}
+                  </span>
+                </span>
+              </div>
+              <span className="price-card-product-price">{ratings}⭐️</span>
+              <div className="price-card-body">{desc}</div>
+              <div className="price-card-footer">
+                <button className="secondary-btn">Details</button>
+                <button className="primary-btn">
+                  Add To Cart
+                  <span className="material-icons price-card-icon-cart">
+                    shopping_cart
+                  </span>
+                </button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      {/* Price Summary */}
       <my-cart class="cart-container">
         <table>
           <th>
@@ -32,7 +75,7 @@ const CartPage = () => {
           Place Order
         </button>
       </my-cart>
-    </div>
+    </>
   );
 };
 
