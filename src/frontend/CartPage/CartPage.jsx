@@ -1,11 +1,13 @@
 import React from "react";
 import { useEffect } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
+import { IoTrashBinOutline } from "react-icons/io5";
 import { useCart } from "../Contexts/CartContext/CartContext";
 import "./CartPage.css";
 const CartPage = () => {
   const {
     cartState: { cartItems },
+    cartDispatch,
   } = useCart();
   return (
     <>
@@ -30,15 +32,21 @@ const CartPage = () => {
                   </span>
                 </span>
               </div>
-              <span className="price-card-product-price">{ratings}⭐️</span>
               <div className="price-card-body">{desc}</div>
               <div className="price-card-footer">
-                <button className="secondary-btn">Details</button>
-                <button className="primary-btn">
-                  Add To Cart
-                  <span className="material-icons price-card-icon-cart">
-                    shopping_cart
-                  </span>
+                <span className="price-card-product-price">{ratings}⭐️</span>
+                <button
+                  style={{ backgroundColor: "#A30000" }}
+                  onClick={() => {
+                    cartDispatch({
+                      type: "REMOVE_FROM_CART",
+                      payload: cartItem._id,
+                    });
+                  }}
+                  className="secondary-btn"
+                >
+                  Remove from Cart
+                  <IoTrashBinOutline className="price-card-icon-cart" />
                 </button>
               </div>
             </div>
