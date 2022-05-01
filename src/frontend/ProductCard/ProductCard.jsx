@@ -1,4 +1,3 @@
-import React from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { IoTrashBinOutline } from "react-icons/io5";
 import { useEffect } from "react";
