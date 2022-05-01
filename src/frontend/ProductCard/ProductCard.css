@@ -4,11 +4,15 @@
 
 .wishlist-icon {
   font-size: 1.5rem;
-  position: absolute;
   right: 1rem;
   color: rgb(192, 54, 54);
   cursor: pointer;
 }
 .wishlist-icon:hover {
   color: red;
+}
+
+.btn-wishlist{
+  background: none;
+  border: none;
 }
