@@ -14,12 +14,12 @@ const WishlistPage = () => {
       {" "}
       <h2 class="wishlist-title align-center">Wishlist</h2>
       <div className="cart-items-wrapper">
-        {wishlistState.wishlistItems.map((product) => {
+        {wishlistItems.map((product) => {
           const { _id, img, title, price, discount, ratings, desc } = product;
 
           return (
             <div key={_id} className="price-card">
-              {wishlistState.wishlistItems.some((item) => item._id === _id) ? (
+              {wishlistItems.some((item) => item._id === _id) ? (
                 <span>
                   <button
                     className="btn-wishlist"
