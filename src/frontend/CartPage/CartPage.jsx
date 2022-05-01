@@ -1,6 +1,6 @@
 import { AiOutlineHeart } from "react-icons/ai";
 import { IoTrashBinOutline } from "react-icons/io5";
-import { useCart } from "../Contexts/CartContext/CartContext";
+import { useCart } from "../Contexts/CartContext";
 import "./CartPage.css";
 const CartPage = () => {
   const {

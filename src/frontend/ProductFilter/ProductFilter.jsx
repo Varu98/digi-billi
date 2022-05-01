@@ -1,5 +1,5 @@
 import React from "react";
-import { useProducts } from "../Contexts/ProductContext/ProductContext";
+import { useProducts } from "../Contexts/ProductContext";
 import "./ProductFilter.css";
 
 const ProductFilter = () => {

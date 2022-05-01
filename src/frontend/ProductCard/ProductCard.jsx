@@ -2,8 +2,8 @@ import React from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { IoTrashBinOutline } from "react-icons/io5";
 import { useEffect } from "react";
-import { useCart } from "../Contexts/CartContext/CartContext";
-import { useProducts } from "../Contexts/ProductContext/ProductContext";
+import { useCart } from "../Contexts/CartContext";
+import { useProducts } from "../Contexts/ProductContext";
 import "./ProductCard.css";
 
 const ProductCard = () => {
