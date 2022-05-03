@@ -1,4 +1,3 @@
-import react from "react";
 import axios from "axios";
 import { createContext, useContext } from "react";
 import { useState, useEffect } from "react";
@@ -7,12 +6,9 @@ import {
   filterByRating,
   filterBySliderPrice,
   priceSort,
-} from "../../Utilities/filterLogic";
+} from "../Utilities/filterLogic";
 import { useReducer } from "react";
-import {
-  filterReducer,
-  initialFiltersState,
-} from "../../Reducers/filterReducer";
+import { filterReducer, initialFiltersState } from "../Reducers/filterReducer";
 
 const ProductContext = createContext();
 

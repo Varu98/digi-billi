@@ -1,24 +1,60 @@
-import React from "react";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { IoTrashBinOutline } from "react-icons/io5";
 import { useEffect } from "react";
-import { useCart } from "../Contexts/CartContext/CartContext";
-import { useProducts } from "../Contexts/ProductContext/ProductContext";
+import { useCart } from "../Contexts/CartContext";
+import { useProducts } from "../Contexts/ProductContext";
+import { useWishlist } from "../Contexts/WishlistContext";
 import "./ProductCard.css";
 
 const ProductCard = () => {
   const { newProducts } = useProducts();
   const { cartState, cartDispatch } = useCart();
+  const { wishlistState, wishlistDispatch } = useWishlist();
+
+  useEffect(() => {
+    console.log(wishlistState);
+  }, [wishlistState]);
+
   useEffect(() => {
     console.log(cartState);
   }, [cartState]);
+
   return (
     <>
       {newProducts.map((product) => {
         const { _id, img, title, price, discount, ratings, desc } = product;
         return (
           <div key={_id} className="price-card">
-            <AiOutlineHeart className="wishlist-icon" />
+            {wishlistState.wishlistItems.some((item) => item._id === _id) ? (
+              <span>
+                <button
+                  className="btn-wishlist"
+                  onClick={() => {
+                    wishlistDispatch({
+                      type: "REMOVE_FROM_WISHLIST",
+                      payload: product._id,
+                    });
+                  }}
+                >
+                  <AiFillHeart className="wishlist-icon" />
+                </button>
+              </span>
+            ) : (
+              <span>
+                <button
+                  className="btn-wishlist"
+                  onClick={() => {
+                    wishlistDispatch({
+                      type: "ADD_TO_WISHLIST",
+                      payload: product,
+                    });
+                  }}
+                >
+                  <AiOutlineHeart className="wishlist-icon" />
+                </button>
+              </span>
+            )}
+
             <span className="price-card-img">
               <img src={img} alt="" />
             </span>

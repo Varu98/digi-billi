@@ -1,4 +1,3 @@
-import React from "react";
 import ProductCard from "../ProductCard/ProductCard.jsx";
 import ProductFilter from "../ProductFilter/ProductFilter.jsx";
 

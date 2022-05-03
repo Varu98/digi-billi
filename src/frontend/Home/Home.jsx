@@ -1,4 +1,3 @@
-import React from "react";
 import "./Home.css";
 import ProductCard from "../ProductCard/ProductCard.jsx";
 import { Link } from "react-router-dom";

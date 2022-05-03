@@ -19,6 +19,6 @@ export const cartReducer = (cartState, cartAction) => {
       };
 
     default:
-      return [...cartState];
+      return { ...cartState };
   }
 };

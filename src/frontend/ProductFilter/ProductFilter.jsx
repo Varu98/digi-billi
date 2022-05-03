@@ -1,5 +1,4 @@
-import React from "react";
-import { useProducts } from "../Contexts/ProductContext/ProductContext";
+import { useProducts } from "../Contexts/ProductContext";
 import "./ProductFilter.css";
 
 const ProductFilter = () => {
@@ -56,7 +55,7 @@ const ProductFilter = () => {
 
           <filter-section className="flex-column">
             <h2>Category</h2>
-            <label for="mobile-brand">
+            <label htmlFor="mobile-brand">
               <input
                 name="mobile-brand"
                 type="checkbox"
@@ -67,7 +66,7 @@ const ProductFilter = () => {
               />
               Realme
             </label>
-            <label for="mobile-brand">
+            <label htmlFor="mobile-brand">
               <input
                 name="mobile-brand"
                 type="checkbox"
@@ -78,7 +77,7 @@ const ProductFilter = () => {
               />
               Oppo
             </label>
-            <label for="mobile-brand">
+            <label htmlFor="mobile-brand">
               <input
                 name="mobile-brand"
                 type="checkbox"
@@ -89,7 +88,7 @@ const ProductFilter = () => {
               />
               Samsung
             </label>
-            <label for="mobile-brand">
+            <label htmlFor="mobile-brand">
               <input
                 name="mobile-brand"
                 type="checkbox"
@@ -100,7 +99,7 @@ const ProductFilter = () => {
               />
               Vivo
             </label>
-            <label for="mobile-brand">
+            <label htmlFor="mobile-brand">
               <input
                 name="mobile-brand"
                 type="checkbox"
@@ -115,7 +114,7 @@ const ProductFilter = () => {
 
           <filter-section className="flex-column">
             <h2>Rating</h2>
-            <label for="rating">
+            <label htmlFor="rating">
               <input
                 onChange={() => {
                   filterDispatch({ type: "RATING", payload: 5 });
@@ -125,7 +124,7 @@ const ProductFilter = () => {
               />
               5 Star
             </label>
-            <label for="rating">
+            <label htmlFor="rating">
               <input
                 onChange={() => {
                   filterDispatch({ type: "RATING", payload: 4 });
@@ -135,7 +134,7 @@ const ProductFilter = () => {
               />
               4 Star and above
             </label>
-            <label for="rating">
+            <label htmlFor="rating">
               <input
                 onChange={() => {
                   filterDispatch({ type: "RATING", payload: 3 });
@@ -145,7 +144,7 @@ const ProductFilter = () => {
               />
               3 Star and above
             </label>
-            <label for="rating">
+            <label htmlFor="rating">
               <input
                 onChange={() => {
                   filterDispatch({ type: "RATING", payload: 2 });
@@ -159,7 +158,7 @@ const ProductFilter = () => {
 
           <filter-section className="flex-column">
             <h2>Sort</h2>
-            <label for="price-sort">
+            <label htmlFor="price-sort">
               <input
                 checked={sortBy && sortBy === "LOW_TO_HIGH"}
                 onChange={() => {
@@ -173,7 +172,7 @@ const ProductFilter = () => {
               />
               Price - Low To High
             </label>
-            <label for="price-sort">
+            <label htmlFor="price-sort">
               <input
                 onChange={() => {
                   filterDispatch({
