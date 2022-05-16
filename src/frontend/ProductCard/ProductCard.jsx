@@ -11,14 +11,6 @@ const ProductCard = () => {
   const { cartState, cartDispatch } = useCart();
   const { wishlistState, wishlistDispatch } = useWishlist();
 
-  useEffect(() => {
-    console.log(wishlistState);
-  }, [wishlistState]);
-
-  useEffect(() => {
-    console.log(cartState);
-  }, [cartState]);
-
   return (
     <>
       {newProducts.map((product) => {

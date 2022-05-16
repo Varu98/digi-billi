@@ -1,28 +1,60 @@
+import { useAuth } from "../Contexts/AuthContext";
+import { useState } from "react";
 import "./AuthPage.css";
+import { loginService } from "../Utilities/loginService";
 
 const AuthPage = () => {
+  const { navigate, authDispatch } = useAuth();
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+  });
+  const loginDataHandler = (e) => {
+    const { name, value } = e.target;
+    setLoginData((prevLoginData) => ({ ...prevLoginData, [name]: value }));
+  };
+
   return (
     <div>
-      <login-container class="flex-column">
+      <login-container className="flex-column">
         <form action="">
-          <h2 class="align-center">Login</h2>
-          <div class="login-content">
-            <label for="email">Email address</label>
-            <input type="text" placeholder="abc@abc.com" />
-            <label for="password">Password</label>
-            <input type="password" />
+          <h2 className="align-center">Login</h2>
+          <div className="login-content">
+            <label htmlFor="email">Email address</label>
+            <input
+              onChange={loginDataHandler}
+              name="email"
+              type="text"
+              placeholder="abc@abc.com"
+            />
+            <label htmlFor="password">Password</label>
+            <input
+              onChange={loginDataHandler}
+              name="password"
+              type="password"
+            />
           </div>
-          <div class="login-footer">
-            <label for="remember">
+          <div className="login-footer">
+            <label htmlFor="remember">
               <input type="checkbox" name="" id="" />
               Remember me
             </label>
             <div>Forgot Your Password?</div>
           </div>
-          <button class="primary-btn" type="submit">
+          <button
+            className="primary-btn"
+            type="submit"
+            onClick={(e) => loginService(e, loginData, navigate, authDispatch)}
+          >
             Login
           </button>
-          <div class="align-center">Create New Account</div>
+          <button
+            onClick={() => navigate("signup")}
+            type="button"
+            className="align-center secondary-btn"
+          >
+            Create New Account
+          </button>
         </form>
       </login-container>
     </div>
