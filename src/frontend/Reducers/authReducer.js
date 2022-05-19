@@ -1,6 +1,6 @@
 export const authInitialState = {
   isLoggedIn: false,
-  token: "",
+  token: null,
   cart: [],
   wishlist: [],
 };
