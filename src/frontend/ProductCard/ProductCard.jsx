@@ -1,6 +1,5 @@
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { IoTrashBinOutline } from "react-icons/io5";
-import { useEffect } from "react";
 import { useCart } from "../Contexts/CartContext";
 import { useProducts } from "../Contexts/ProductContext";
 import { useWishlist } from "../Contexts/WishlistContext";
@@ -10,14 +9,6 @@ const ProductCard = () => {
   const { newProducts } = useProducts();
   const { cartState, cartDispatch } = useCart();
   const { wishlistState, wishlistDispatch } = useWishlist();
-
-  useEffect(() => {
-    console.log(wishlistState);
-  }, [wishlistState]);
-
-  useEffect(() => {
-    console.log(cartState);
-  }, [cartState]);
 
   return (
     <>

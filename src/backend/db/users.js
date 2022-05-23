@@ -17,3 +17,18 @@ export const users = [
     updatedAt: formatDate(),
   },
 ];
+// {
+//   _id: uuid(),
+//   firstName: "Varun",
+//   lastName: "Singh",
+//   email: "Varunsingh@gmail.com",
+//   password: "mistry",
+//   createdAt: formatDate(),
+//   updatedAt: formatDate(),
+// },
+// {
+// "firstName": "Adarsh",
+// "lastName": "Balika",
+// "email": "adarshbalika@gmail.com",
+// "password": "adarshbalika",
+// },

@@ -5,7 +5,12 @@ import {
   AiOutlineShoppingCart,
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../Contexts/AuthContext";
+import { logoutService } from "../../Utilities/logoutService";
 const Navbar = () => {
+  const { navigate, authState, authDispatch } = useAuth();
+  const { isLoggedIn } = authState;
+
   return (
     <div>
       <header>
@@ -27,7 +32,16 @@ const Navbar = () => {
             </button>
             <ul className="flex-row navbar-ul">
               <li>
-                <Link to="login">Logout</Link>
+                {isLoggedIn ? (
+                  <button
+                    className="secondary-btn"
+                    onClick={() => logoutService(authDispatch, navigate)}
+                  >
+                    Logout
+                  </button>
+                ) : (
+                  <Link to="login">Login</Link>
+                )}
               </li>
               <Link to="cart">
                 <AiOutlineShoppingCart className="nav-icon" />
