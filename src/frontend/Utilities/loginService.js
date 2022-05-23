@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const loginService = (e, loginData, navigate, authDispatch) => {
+export const loginService = (e, loginData, navigate, authDispatch, from) => {
   e.preventDefault();
   (async () => {
     try {
@@ -16,7 +16,9 @@ export const loginService = (e, loginData, navigate, authDispatch) => {
       });
 
       console.log(data, status);
-      if (status === 200) navigate("/");
+      console.log(from);
+
+      if (status === 200) navigate(from, { replace: true });
     } catch (error) {
       console.log("Login: ", error);
     }

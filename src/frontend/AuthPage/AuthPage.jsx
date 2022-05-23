@@ -2,9 +2,13 @@ import { useAuth } from "../Contexts/AuthContext";
 import { useState } from "react";
 import "./AuthPage.css";
 import { loginService } from "../Utilities/loginService";
+import { useLocation } from "react-router-dom";
 
 const AuthPage = () => {
   const { navigate, authDispatch } = useAuth();
+  const location = useLocation();
+  const from = location?.state?.from.pathname || "/";
+
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
@@ -44,7 +48,9 @@ const AuthPage = () => {
           <button
             className="primary-btn"
             type="submit"
-            onClick={(e) => loginService(e, loginData, navigate, authDispatch)}
+            onClick={(e) =>
+              loginService(e, loginData, navigate, authDispatch, from)
+            }
           >
             Login
           </button>
