@@ -8,13 +8,14 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../../Contexts/AuthContext";
 import { useEffect } from "react";
 import { logoutService } from "../../Utilities/logoutService";
+import { onRefresh } from "../../Utilities/onRefresh";
 const Navbar = () => {
   const { navigate, authState, authDispatch } = useAuth();
   const { isLoggedIn } = authState;
 
   useEffect(() => {
-    console.log(authState);
-  }, [authState]);
+    onRefresh(authDispatch);
+  }, []);
 
   return (
     <div>

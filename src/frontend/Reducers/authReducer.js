@@ -12,17 +12,21 @@ export const authReducer = (authState, authDispatch) => {
       return {
         ...authState,
         ...payload.createdUser,
-        token: payload.encodedToken,
+        token: localStorage.getItem("token"),
       };
     case "LOGIN":
       return {
         ...authState,
         ...payload.foundUser,
-        token: payload.encodedToken,
+        token: localStorage.getItem("token"),
         isLoggedIn: true,
       };
     case "LOGOUT":
       return { ...authInitialState };
+
+    case "LOGIN_PERSISTENT":
+      return { ...authState, isLoggedIn: true };
+
     default:
       return { ...authState };
   }

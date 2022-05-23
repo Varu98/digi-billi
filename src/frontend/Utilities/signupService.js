@@ -17,7 +17,7 @@ export const signupService = (e, signupData, authDispatch, navigate) => {
       // navigate to somewhere...
       if (status === 201) navigate("/login");
     } catch (error) {
-      console.log(error);
+      console.log("Signup: ", error);
     }
   })();
 };

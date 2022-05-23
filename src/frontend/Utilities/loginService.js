@@ -18,9 +18,8 @@ export const loginService = (e, loginData, navigate, authDispatch) => {
       console.log(data, status);
       if (status === 200) navigate("/");
     } catch (error) {
-      console.log(error);
+      console.log("Login: ", error);
     }
   })();
-
   console.log(loginData);
 };
