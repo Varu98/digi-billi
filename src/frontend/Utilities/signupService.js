@@ -13,11 +13,8 @@ export const signupService = (e, signupData, authDispatch, navigate) => {
         type: "SIGNUP_DATA",
         payload: data,
       });
-      console.log(data);
       // navigate to somewhere...
       if (status === 201) navigate("/login");
-    } catch (error) {
-      console.log("Signup: ", error);
-    }
+    } catch (error) {}
   })();
 };

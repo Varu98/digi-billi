@@ -15,7 +15,7 @@ const CartPage = () => {
   }, 0);
 
   const totalPrice = Math.floor(addPrice - addPrice * (30 / 100) + 499);
-  console.log(addPrice);
+
   return (
     <div className="cart-wrapper">
       <div className="cart-items-wrapper">
