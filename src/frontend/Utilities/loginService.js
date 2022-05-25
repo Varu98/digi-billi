@@ -15,13 +15,7 @@ export const loginService = (e, loginData, navigate, authDispatch, from) => {
         payload: data,
       });
 
-      console.log(data, status);
-      console.log(from);
-
       if (status === 200) navigate(from, { replace: true });
-    } catch (error) {
-      console.log("Login: ", error);
-    }
+    } catch (error) {}
   })();
-  console.log(loginData);
 };

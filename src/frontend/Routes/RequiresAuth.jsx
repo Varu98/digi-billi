@@ -5,7 +5,7 @@ const RequiresAuth = ({ children }) => {
   const location = useLocation();
   const { authState } = useAuth();
   const { isLoggedIn } = authState;
-  console.log(isLoggedIn);
+
   return isLoggedIn ? (
     children
   ) : (

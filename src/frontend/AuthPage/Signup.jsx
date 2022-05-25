@@ -18,8 +18,8 @@ const AuthPage = () => {
     setSignupData((prevData) => ({ ...prevData, [name]: value }));
   };
   return (
-    <div className="fix-width flex-center">
-      <form className="input_form " autoComplete="off">
+    <div className=" flex-center">
+      <form className="fix-width input_form " autoComplete="off">
         <fieldset className="input_fieldset  ">
           <input
             autoComplete="off"
