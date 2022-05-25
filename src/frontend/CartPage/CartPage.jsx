@@ -8,6 +8,14 @@ const CartPage = () => {
   const { cartItems } = cartState;
   const { wishlistState, wishlistDispatch } = useWishlist();
   const { wishlistItems } = wishlistState;
+  const addPrice = cartItems.reduce((accum, e) => {
+    let filteredPrice = Number.parseInt(e.price.split(" ")[1]);
+    accum = accum + filteredPrice;
+    return accum;
+  }, 0);
+
+  const totalPrice = Math.floor(addPrice - addPrice * (30 / 100) + 499);
+  console.log(addPrice);
   return (
     <div className="cart-wrapper">
       <div className="cart-items-wrapper">
@@ -95,36 +103,40 @@ const CartPage = () => {
           );
         })}
       </div>
-      {/* Price Summary */}
-      <my-cart class="cart-container">
-        <table>
-          <th>
-            <h3 class="border-bottom">Price Details</h3>
-          </th>
-          <tr>
-            <td>Price(2 items)</td>
-            <td>1200 rs</td>
-          </tr>
-          <tr>
-            <td>Discount</td>
-            <td>1200 rs</td>
-          </tr>
-          <tr>
-            <td>Delivery Charges</td>
-            <td>499 rs</td>
-          </tr>
-          <tr>
-            <th class="border-top-bottom">
-              <h3>Total Amount</h3>
+      <div>
+        {" "}
+        <my-cart className="cart-container">
+          <table>
+            <th>
+              <h3 className="border-bottom">Price Details</h3>
             </th>
-            <td>2400 rs</td>
-          </tr>
-        </table>
-        <p>you will save 20 rs on this order</p>
-        <button class="primary-btn" type="submit">
-          Place Order
-        </button>
-      </my-cart>
+            <tr>
+              <td>Price({cartItems.length} Items)</td>
+              <td>{addPrice} rs</td>
+            </tr>
+            <tr>
+              <td>Discount</td>
+              <td>30 %</td>
+            </tr>
+            <tr>
+              <td>Delivery Charges</td>
+              <td>499 rs</td>
+            </tr>
+            <tr>
+              <th className="border-top-bottom">
+                <h3>Total Amount</h3>
+              </th>
+              <td>{totalPrice} rs</td>
+            </tr>
+          </table>
+          <p>
+            you will save {Math.floor(addPrice * (30 / 100))} rs on this order
+          </p>
+          <button className="primary-btn" type="submit">
+            Place Order
+          </button>
+        </my-cart>
+      </div>
     </div>
   );
 };

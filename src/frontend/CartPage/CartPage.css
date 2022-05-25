@@ -20,14 +20,14 @@ my-cart td {
   font-weight: 450;
 }
 
-.cart-container {
+my-cart {
   display: flex;
   flex-direction: column;
   max-width: 20rem;
   padding: 1rem;
   margin: 1rem;
   gap: 1rem;
-  box-shadow: 2px 2px 5px var(--shadow);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
 }
 
