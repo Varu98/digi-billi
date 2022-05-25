@@ -9,7 +9,7 @@ const CartPage = () => {
   const { wishlistState, wishlistDispatch } = useWishlist();
   const { wishlistItems } = wishlistState;
   return (
-    <>
+    <div className="cart-wrapper">
       <div className="cart-items-wrapper">
         {cartItems.map((product) => {
           const { _id, img, title, price, discount, ratings, desc } = product;
@@ -125,7 +125,7 @@ const CartPage = () => {
           Place Order
         </button>
       </my-cart>
-    </>
+    </div>
   );
 };
 

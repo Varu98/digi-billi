@@ -23,7 +23,6 @@ my-cart td {
 .cart-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   max-width: 20rem;
   padding: 1rem;
   margin: 1rem;
@@ -43,4 +42,11 @@ my-cart td {
 
 .cart-items-wrapper{
   display: flex;
+flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.cart-wrapper{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }
