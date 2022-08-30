@@ -23,4 +23,7 @@
   .nav-search {
     display: none;
   }
+  .navbar-ul {
+    display: none;
+  }
 }
