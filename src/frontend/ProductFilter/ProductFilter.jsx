@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { useProducts } from "../Contexts/ProductContext";
+import { AiOutlineFilter } from "react-icons/ai";
 import "./ProductFilter.css";
 
 const ProductFilter = () => {
@@ -14,12 +16,19 @@ const ProductFilter = () => {
     },
     filterDispatch,
   } = useProducts();
-
+  const [showFilter, setShowFilter] = useState(false);
   return (
     <div>
-      <div className="filter-container">
-        <div className="filter-content-container">
-          <filter-section className="flex-row flex-space-btw">
+      <button onClick={() => setShowFilter(!showFilter)} className="showfilter">
+        <AiOutlineFilter />
+      </button>
+      <div
+        className={
+          showFilter ? "filter-container" : "filter-container showfilter-false"
+        }
+      >
+        <div className="filter-content-container showfilter-false">
+          <filter-header className="flex-row flex-space-btw">
             <h2>Filters</h2>
             <button
               onClick={() => {
@@ -28,7 +37,7 @@ const ProductFilter = () => {
             >
               clear
             </button>
-          </filter-section>
+          </filter-header>
 
           <filter-section>
             <h2>Price</h2>
