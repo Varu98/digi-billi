@@ -17,12 +17,14 @@ const Navbar = () => {
         <navbar className="flex-row bg-d-blue text-white">
           <div className="navbar-list navbar-primary flex-row">
             <Link to="/">
-              <button className="secondary-btn">
-                <h1>Cell Kart 🛒</h1>
+              <button className="secondary-btn_nav">
+                <h1>
+                  Cell Kart <span className="secondary-btn__icon">🛒</span>
+                </h1>
               </button>
             </Link>
           </div>
-          <label htmlFor="">
+          <label className="nav-search" htmlFor="">
             <AiOutlineSearch />
             <input type="text" />
           </label>

@@ -29,6 +29,9 @@
 .display-products-banner__products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  place-content: center;
+  place-items: center;
+  gap: 1rem;
 }
 
 .display-products-banner {

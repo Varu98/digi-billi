@@ -8,3 +8,19 @@
   justify-content: center;
   align-items: center;
 }
+.secondary-btn_nav {
+  background: none;
+  color: white;
+  border: none;
+}
+.fa-bars {
+  font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  .secondary-btn_nav {
+    font-size: 0.7rem;
+  }
+  .nav-search {
+    display: none;
+  }
+}
