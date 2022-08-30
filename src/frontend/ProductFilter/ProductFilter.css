@@ -23,6 +23,7 @@
 }
 .showfilter:hover {
   color: rgb(0, 225, 255);
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {
