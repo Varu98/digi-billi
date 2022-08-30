@@ -51,9 +51,11 @@ const ProductCard = () => {
             </span>
             <div className="price-card-header">
               <div className="price-card-product-name">{title}</div>
-              <span className="price-card-product-price">{price}</span>
-              <span className="price-card-price-badge">
-                <span className="price-card-discount-rate">{discount}%</span>
+              <span className="flex-row">
+                <span className="price-card-product-price">{price}</span>
+                <span className="price-card-price-badge">
+                  <span className="price-card-discount-rate">{discount}%</span>
+                </span>
                 <span className="material-icons price-card-icon-discount">
                   {" "}
                   discount{" "}
@@ -72,7 +74,7 @@ const ProductCard = () => {
                       payload: product._id,
                     });
                   }}
-                  className="secondary-btn"
+                  className="secondary-btn price-card-btn"
                 >
                   Remove from Cart
                   <IoTrashBinOutline className="price-card-icon-cart" />
@@ -82,7 +84,7 @@ const ProductCard = () => {
                   onClick={() => {
                     cartDispatch({ type: "ADD_TO_CART", payload: product });
                   }}
-                  className="primary-btn"
+                  className="primary-btn price-card-btn"
                 >
                   Add To Cart
                   <span className="material-icons price-card-icon-cart">

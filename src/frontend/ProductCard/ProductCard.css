@@ -12,7 +12,43 @@
   color: red;
 }
 
-.btn-wishlist{
+.btn-wishlist {
   background: none;
   border: none;
+}
+@media (max-width: 500px) {
+  .price-card {
+    max-width: 15rem;
+    padding: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .price-card-header {
+    max-width: 10rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 10rem;
+  }
+  .price-card-btn {
+    font-size: 0.7rem;
+    max-width: 6rem;
+    max-height: 4rem;
+    margin: 0;
+    padding: 0.5rem 0.7rem;
+  }
+  .price-card-icon-cart {
+    display: none;
+  }
+  .price-card-product-name {
+    font-size: 1rem;
+    max-width: 15rem;
+  }
+  .price-card-body {
+    font-size: 0.8rem;
+  }
 }
