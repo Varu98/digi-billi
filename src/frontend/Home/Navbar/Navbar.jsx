@@ -7,8 +7,10 @@ import {
 import { Link } from "react-router-dom";
 import { useAuth } from "../../Contexts/AuthContext";
 import { logoutService } from "../../Utilities/logoutService";
+import { useState } from "react";
 const Navbar = () => {
   const { navigate, authState, authDispatch } = useAuth();
+  const [showIcons, setShowIcons] = useState(true);
   const { isLoggedIn } = authState;
 
   return (
@@ -29,10 +31,17 @@ const Navbar = () => {
             <input type="text" />
           </label>
           <div className="navbar-list navbar-social">
-            <button className="hamburger-menu-btn">
+            <button
+              onClick={() => setShowIcons(!showIcons)}
+              className="hamburger-menu-btn"
+            >
               <i className="fas fa-bars"></i>
             </button>
-            <ul className="flex-row navbar-ul">
+            <ul
+              className={
+                showIcons ? "flex-row navbar-ul" : "flex-row navbar-ul-false"
+              }
+            >
               <li>
                 {isLoggedIn ? (
                   <button
@@ -45,9 +54,12 @@ const Navbar = () => {
                   <Link to="login">Login</Link>
                 )}
               </li>
-              <Link to="cart">
-                <AiOutlineShoppingCart className="nav-icon" />
-              </Link>
+              <li>
+                {" "}
+                <Link to="cart">
+                  <AiOutlineShoppingCart className="nav-icon" />
+                </Link>
+              </li>
               <li>
                 <Link to="wishlist">
                   <AiOutlineHeart className="nav-icon" />

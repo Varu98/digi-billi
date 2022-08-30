@@ -17,13 +17,16 @@
   font-size: 1.5rem;
 }
 @media (max-width: 500px) {
+  .navbar-ul {
+    flex-direction: column;
+  }
   .secondary-btn_nav {
     font-size: 0.7rem;
   }
   .nav-search {
     display: none;
   }
-  .navbar-ul {
+  .navbar-ul-false {
     display: none;
   }
 }
